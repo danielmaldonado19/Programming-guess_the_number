@@ -1,0 +1,53 @@
+#12/02.1: Initial configuration.
+
+.1.Asked for a excercise to CHATGPT and it gave me this:
+
+Sure! Here is a simple project idea in Python:
+
+"Guess the Number" game
+
+In this game, the computer randomly generates a number between 1 and 100, and
+the player has to guess what the number is. The computer gives hints whether the player's
+guess is too high or too low. The game continues until the player correctly guesses the
+number.
+
+Here's some sample code to get you started:
+
+
+
+import random
+
+print("Welcome to the Guess the Number game!")
+print("I'm thinking of a number between 1 and 100.")
+print("Try to guess what it is in as few attempts as possible.\n")
+
+# Set the secret number
+number = random.randint(1, 100)
+
+# Initialize variables to keep track of the number of guesses and whether the player has won
+guesses = 0
+won = False
+
+# Start the game loop
+while not won:
+    # Get the player's guess
+    guess = int(input("Enter your guess: "))
+    
+    # Update the number of guesses
+    guesses += 1
+    
+    # Check if the guess is too high or too low
+    if guess > number:
+        print("Too high! Try again.")
+    elif guess < number:
+        print("Too low! Try again.")
+    else:
+        # The player has won!
+        won = True
+        
+# Print the final message
+if won:
+    print(f"\nCongratulations! You guessed the number in {guesses} attempts.")
+
+
+
