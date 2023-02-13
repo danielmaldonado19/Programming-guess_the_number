@@ -51,3 +51,10 @@ if won:
 
 
 
+#12/02.2 CHECK POINT 
+#13/02.1> My steps.
+
+After understanding the excercise (next time I'll ask for no tricks) I will create
+the game as well.
+
+
