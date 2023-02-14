@@ -15,16 +15,24 @@ user_won = False
 
 while not user_won: #(user_won == False) -> not False is True   
     user_numer = 0
-    for i in range(1,3):
-        user_numer = int(input(f"This is your {i + 1} attempt. Choose wisely... "))
+    ini = 1
+    end = 3
+    for i in range(ini,end):
+        print(f"ROUND {i}*****")
+        user_numer = int(input(f"This is your {i} attempt. INPUT HERE YOUR NUMBER:"))
         input("Are you sure?") #We can insert a yes and no later
         if user_numer > pc_numer:
             input("One step to death...and above my number.")
-            input(f"TRY AGAIN! YOU HAVE {i} OPPORTUNITIES MORE!")
+            input(f"TRY AGAIN! YOU HAVE {end-i} oportunitties more!")
+            print("*********************")
         elif user_numer < pc_numer:    
             input("An opportunity less. Your live is low of time, as your number.")
-            input(f"TRY AGAIN! YOU HAVE {i} OPPORTUNITIES MORE!")
+            input(f"TRY AGAIN! YOU HAVE {end-i} opportunities more!")
+            print("*********************")
         else:
             input("YOU ARE A MASTER! YOU WON")
+            print("END OF THE GAME")
+            print("*********************")
             
-            
+#There is a corruption between while and for loops. So its on my own to choose if the game
+#have 3 opportunities or it will continue to until usr wins.
